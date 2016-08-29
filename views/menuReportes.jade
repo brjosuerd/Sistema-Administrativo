@@ -1,0 +1,8 @@
+extends adtvo
+
+block menu
+  div(class="contenedor", ng-controller="usuario")
+    ul(class="contenedor")
+      each pago in pagos
+        h2 #{"Mes: " + pago.mes}
+        p #{"Matricula de alumno: " + pago.matricula}

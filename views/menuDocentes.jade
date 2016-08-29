@@ -1,0 +1,34 @@
+extends adtvo
+
+block menu
+  form(class="contenedor", action="/adtvo/docentes", method="POST")
+    h2(class="templatemo-site-title") Registro de Docentes
+    div(class="col-sm-12 col-md-12")
+      div(class="col-sm-6 col-md-6")
+        ul(class="contenedor")
+          each docente in docentes
+            h2 #{"Docente: " + docente.username}
+            p #{"Correo: " + docente.email}
+            p #{"Edad: " + docente.edad}
+      div(class="col-sm-6 col-md-6")
+        div(class="login__row")
+          img(src="/images/names.png")
+          input(type="text" class="login__input name" placeholder="Nombres" name="nombres" required)
+        div(class="login__row")
+          img(src="/images/names.png")      
+          input(type="text" class="login__input name" placeholder="Apellidos" name="apellidos" required)  
+        div(class="login__row")
+          img(src="/images/age.png") 
+          input(type="number" class="login__input name" placeholder="Edad" min="17" max="100" name="edad" required)
+        div(class="login__row")
+          img(src="/images/email.png")
+          input(type="text" class="login__input name" placeholder="Email" name="email" required)
+        div(class="login__row")
+          img(src="/images/user.png")
+          input(type="text" class="login__input name" placeholder="Username" name="username" required)
+        div(class="login__row")
+          img(src="/images/password.png")
+          input(type="password" class="login__input pass" placeholder="Password" name="password" required)   
+        button(type="submit" class="login__submit") Sing in
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src="/javascripts/index.js")

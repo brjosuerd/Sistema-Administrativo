@@ -1,0 +1,11 @@
+extends admin
+
+block register
+  div(class="login__form")
+    div(class="login__row")
+      img(src="/images/user.png")
+      input(type="text" class="login__input name" placeholder="Username" id="username")
+    div(class="login__row")
+      img(src="/images/password.png")
+      input(type="password" class="login__input pass" placeholder="Password" id="password")
+    button(type="button" class="login__submit")

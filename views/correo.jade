@@ -1,0 +1,22 @@
+extends admin
+
+block menu
+  form(class="contenedor" action="/admin/correo" method="POST")
+    h2(class="templatemo-site-title") Correo
+    div(class="col-sm-12 col-md-12")
+      div(class="col-sm-6 col-md-6")
+        ul(class="contenedor")
+          each correo in correos
+            h2(class=texto) #{"Usunto: " + correo.asunto}
+            p #{"De: " + correo.emisor}
+            p #{"Mensaje: " + correo.mensaje}
+      div(class="col-sm-6 col-md-6")
+        div(class="form-group")
+          input(class="form-control" placeholder="Para: " name="receptor")
+        div(class="form-group")
+          input(class="form-control" placeholder="Asunto: " name="asunto")
+        div(class="form-group")
+          textarea(class="form-control" rows="7" placeholder="Escribe tu mensaje" name="mensaje")
+        button(class="btn btn-primary" type="submit") Enviar
+  script(src="/javascripts/index.js")
+  

@@ -1,0 +1,9 @@
+extends admin
+
+block menu
+  form(class="contenedor")
+    h2(class="templatemo-site-title") Reportes
+    ul(class="contenedor")
+      each user in users
+        h2 #{"Usuario: " + user.username}
+        p #{"UltimaConexion: " + user.ultimaConexion}

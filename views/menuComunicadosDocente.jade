@@ -1,0 +1,10 @@
+extends docente
+
+block menu  
+  form(class="contenedor" action="/docente/comunicados" method="POST")
+    h2(class="templatemo-site-title") Comunicados
+    ul(class="contenedor")
+      each comunicado in comunicados
+        h2(class=texto) #{"Titulo: " + comunicado.titulo}
+        p #{"Mensaje: " + comunicado.mensaje}
+  script(src="/javascripts/index.js") 

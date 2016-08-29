@@ -1,0 +1,33 @@
+extends layout
+
+block pagina
+    title Unedl
+    meta(name="keywords" content="")  
+    meta(name="description" content="" )
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,600,500,300,700' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet" href="/stylesheets/templatemo_main.css")
+    div(class="header-section") 
+    div(class="col-lg-12 col-md-12 col-sm-12 col-xs-12 affix text-center" style="z-index: 1;")
+      h1(class="templatemo-site-title")
+        a 
+        img(src="/images/btn-menu.png" alt="main menu" id="m-btn" class="pull-left visible-xs visible-sm")
+      ul(id="responsive" style="display:none" class="hidden-lg hidden-md")
+    div(class="menu visible-md visible-lg")
+      ul(id="menu-list")
+        li(class="reportes-menu")
+          a(href="/admin/reportes") Reportes
+        li(class="usuarios-menu")
+          a(href="/admin/usuarios") Usuarios
+        li(class="correo-menu")
+          a(href="/admin/correo") Correo
+        li(class="salir-menu")
+          a(href="/admin/salir") Salir          
+    div(class="image-section")
+      div(class="image-container")
+    div(class="row")
+      div(class="templatemo-content")
+        block menu
+    script(src="/javascripts/jquery.min.js")
+    script(src="/javascripts/jquery.backstretch.min.js")
+    script(src="/javascripts/templatemo_script.js")

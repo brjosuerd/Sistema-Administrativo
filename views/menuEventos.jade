@@ -1,0 +1,18 @@
+extends adtvo
+
+block menu
+  form(class="contenedor" action="/adtvo/eventos" method="POST")
+    h2(class="templatemo-site-title") Eventos
+    div(class="col-sm-12 col-md-12")
+      div(class="col-sm-6 col-md-6")
+        ul(class="contenedor")
+          h2 Titulo
+          p Textp
+      div(class="col-sm-6 col-md-6")    
+        div(class="form-group")
+          input(class="form-control" placeholder="Fecha: (HH:MM DD-MM-YYYY)" name="fecha" required)
+        div(class="form-group")
+          input(class="form-control" placeholder="Nombre del evento" name="evento" required)
+        div(class="form-group")
+          textarea(class="form-control" rows="7" placeholder="Descripcion" name="descripcion" required)
+        button(class="btn btn-primary" type="submit") Enviar
